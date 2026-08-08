@@ -1,0 +1,13 @@
+output/
+__pycache__/
+*.pyc
+safety/modelService/
+*.tar
+*.json
+*.jsonl
+eval/outputs/
+.worktrees/
+docs/
+logs/
+**/.env
+tests/

@@ -1,0 +1,32 @@
+datasets:
+  gsm8k:
+    hf_repo: openai/gsm8k
+    split: test
+    question_field: question
+    answer_field: answer
+    prompt_template: |
+      You are a helpful math tutor. Solve the following problem step by step.
+      Question: {question}
+      Show reasoning clearly. Put the final numeric answer inside [[...]].
+    answer_pattern: "\\[\\[(.*?)\\]\\]"
+    postprocess: gsm8k_number
+
+  math500:
+    hf_repo: HuggingFaceH4/MATH-500
+    split: test
+    question_field: problem
+    answer_field: solution
+    prompt_template: |
+      You are a helpful math tutor. Solve the following problem step by step.
+      Problem: {question}
+      Show your reasoning. Put the final answer inside [[...]].
+    answer_pattern: "\\[\\[(.*?)\\]\\]"
+    postprocess: math_box
+
+
+#   hf_repo: Hugging Face 数据集标识
+#   split: 使用的数据集分割
+#   question_field/answer_field: 输入/金标准字段名
+#   prompt_template: 英文 prompt，包含 {question} 占位符，要求模型把最终答案放在 [[...]] 中
+#   answer_pattern: 用于解析模型输出的正则（默认提取 [[...]] 内容）
+#   postprocess: 结果后处理函数标识（脚本内置 gsm8k_number, math_box，可扩展）
