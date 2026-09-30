@@ -157,11 +157,10 @@ python tools/validate_benchmark_dataset.py --task hallucination --data-path data
 ## Citation
 
 ```bibtex
-@inproceedings{zeng2026shorter,
-  title     = {Shorter, but Still Trustworthy? An Empirical Study of Chain-of-Thought Compression},
-  author    = {Zeng, Lingjie and Chen, Xiaofan and Wang, Yanbo and Chen, Xiuying},
-  booktitle = {Conference on Language Modeling (COLM)},
-  year      = {2026},
-  note      = {Accepted at COLM 2026}
+@article{zeng2026shorter,
+  title   = {Shorter, but Still Trustworthy? An Empirical Study of Chain-of-Thought Compression},
+  author  = {Zeng, Lingjie and Chen, Xiaofan and Wang, Yanbo and Chen, Xiuying},
+  journal = {arXiv preprint arXiv:2604.04120},
+  year    = {2026}
 }
 ```
